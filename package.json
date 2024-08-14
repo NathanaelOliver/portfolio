@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/NathanaelOliver/portfolio",
+  "homepage": "https://nathanaeloliver.github.io/portfolio/",
   "dependencies": {
     "@svgr/plugin-svgo": "^8.1.0",
     "@testing-library/jest-dom": "^5.17.0",
