@@ -1,11 +1,12 @@
 /* src/App.css */
+
 body {
   margin: 0;
-  height: 100vh;
+  height: calc(100vh + 500px);
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, #5c5c5c, #73000a, #000000);
+  align-items: top;
+  background: linear-gradient(to bottom, #5c5c5c, #73000a, #000000);
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -20,8 +21,10 @@ body {
   padding: 20px;
   border: 8px solid black;
   border-radius: 12px;
-  background: linear-gradient(to right, #570008, #844247);
+  background: linear-gradient(to bottom, #570008, #844247);
   margin: auto;
+  margin-bottom: 20px;
+  margin-top: 100px;
 }
 
 .Title {
@@ -38,7 +41,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 00px;
   max-width: 1200px;
   margin: auto;
 }
@@ -48,25 +51,39 @@ body {
   border: 8px solid black;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(to right, #570008, #844247);
+  background: linear-gradient(to bottom, #570008, #844247);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 100%;
 }
 
+.ProjectTileLeftColumn {
+  width: 200px;
+}
+.ProjectTileLeftColumn.expanded {
+  width: 400px;
+}
+
 .ProjectTile img {
-  width: 100%;
+  width: 150px;
   height: auto;
   object-fit: cover; /* Ensure the image doesn't stretch and maintains aspect ratio */
+  margin: 25px;
+}
+
+.ProjectTile.expanded img {
+  width: 350px;
+  height: auto;
+  object-fit: cover; /* Ensure the image doesn't stretch and maintains aspect ratio */
+  margin: 25px;
 }
 
 .ProjectPicture {
   flex: 0 0 auto; /* Prevents the picture from stretching */
 }
 
-.ProjectContent {
+.ProjectTileRightColumn {
   flex: 1;
-  padding: 20px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -82,14 +99,16 @@ body {
 
 .ProjectDescription {
   font-size: 24px;
-  margin: 10px 0;
+  margin-right: 25px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-
-.ProjectCaption {
-  margin-top: 10px;
+.ProjectDescription.expanded {
+  font-size: 24px;
+  margin-right: 25px;
+  overflow: hidden;
+  white-space: wrap;
 }
 
 .ProjectLink {
@@ -105,8 +124,12 @@ body {
 .ProjectTile.expanded {
   grid-column: 1 / -1;
   width: 100%;
+  max-width: 1184px;
   transform: scale(1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.ProjectTileLeftColumn.expanded {
+  max-width: 400px;
 }
 
 .ProjectTile.expanded .ProjectCaption,
