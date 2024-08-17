@@ -4,12 +4,12 @@ const description =
 
 const projects = [
   {
-    title: "Project 1",
+    title: "Vex Robotics AI Object Detection",
     picture: "https://via.placeholder.com/150",
     caption: "Caption 1",
     link: "https://example.com",
     description:
-      "This is a description for Project 1. It should be long enough to test the truncation. What if this text is obscenely long. Will it go around to the next line and cycle around. I wonder what the word is called for htat. Its called wrapping. I wonder if the text is obscenely long if it will wrap and i wonder if the tile will grow in height to mathc the size of the text. i willl use this as a test to find out.",
+      "I designed a system to take pictures while mounted on a robot. The camera was connected to a jetson nano which performed object detection and identified game objects. The Jetson would then control the robot to move towards the object and score it in the desired goal.\nThis project involved several technical aspects such as gathering and labeling data, designing and training a model, reducing the complexity of the model to run in real time on a microprocessor.",
   },
 ];
 
