@@ -5,7 +5,7 @@ const description =
 const projects = [
   {
     title: "Vex Robotics AI Object Detection",
-    picture: "https://via.placeholder.com/150",
+    picture: "https://raw.githubusercontent.com/NathanaelOliver/portfolio/main/src/images/AI_Triball_Detection.png",
     caption: "Caption 1",
     link: "https://example.com",
     description:
