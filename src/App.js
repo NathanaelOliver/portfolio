@@ -13,8 +13,51 @@ function App() {
   return (
     <div className="App">
       <header className="Header">
+        <div className="ProfilePictureContainer">
+          <img
+            src="portfolio/images/profile_picture.jpg"
+            alt="Profile Picture"
+            className="ProfilePicture"
+          />
+        </div>
         <h1 className="Title">{title}</h1>
         <p className="Description">{description}</p>
+        <div className="IconRow">
+          <a
+            href="https://github.com/NathanaelOliver"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/portfolio/icons/github.png"
+              alt="Github"
+              className="Icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nathanael-oliver-034bb220b/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/portfolio/icons/linkedin.png"
+              alt="LinkedIn"
+              className="Icon"
+            />
+          </a>
+          <a
+            href="/portfolio/pdfs/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/portfolio/icons/resume.png"
+              alt="Resume"
+              className="Icon"
+            />
+          </a>
+          {/* Add more icons as needed */}
+        </div>
       </header>
       <section className="Projects">
         {projects.map((project, index) => (
