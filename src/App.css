@@ -48,11 +48,17 @@ body {
 .Projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 00px;
+  gap: 25px;
+  padding: 25px;
   max-width: 1200px;
   margin: auto;
   margin-bottom: 250px;
+}
+
+@media (max-width: 1025px) {
+  .Projects {
+      grid-template-columns: 1fr; 
+  }
 }
 
 .ProjectTile {
@@ -64,27 +70,29 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 100%;
+  max-height: 400px;
 }
 
 .ProjectTileLeftColumn {
-  width: 200px;
+  min-width: 150px;
+  max-width: 50%;
+  padding: 25px;
 }
 .ProjectTileLeftColumn.expanded {
-  width: 400px;
+  width: 66%;
 }
 
 .ProjectTile img {
-  width: 150px;
+  width: 100%;
   height: auto;
-  object-fit: cover; /* Ensure the image doesn't stretch and maintains aspect ratio */
-  margin: 25px;
+  max-height: 350px;
+  object-fit: cover;
 }
 
 .ProjectTile.expanded img {
-  width: 350px;
+  width: 100%;
   height: auto;
-  object-fit: cover; /* Ensure the image doesn't stretch and maintains aspect ratio */
-  margin: 25px;
+  object-fit: cover;
 }
 
 .ProjectPicture {
@@ -98,6 +106,8 @@ body {
   flex-direction: column;
   justify-content: center;
   overflow: hidden; /* Prevents overflow */
+  min-width: 250px;
+  padding-right: 25px;
 }
 
 .ProjectTitle {
@@ -136,6 +146,7 @@ body {
   max-width: 1184px;
   transform: scale(1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-height: none;
 }
 .ProjectTileLeftColumn.expanded {
   max-width: 400px;
