@@ -55,12 +55,6 @@ body {
   margin-bottom: 250px;
 }
 
-@media (max-width: 1025px) {
-  .Projects {
-      grid-template-columns: 1fr; 
-  }
-}
-
 .ProjectTile {
   display: flex;
   border: 8px solid black;
@@ -74,9 +68,9 @@ body {
 }
 
 .ProjectTileLeftColumn {
-  min-width: 150px;
+  min-width: 200px;
   max-width: 50%;
-  padding: 25px;
+  display: block;
 }
 .ProjectTileLeftColumn.expanded {
   width: 66%;
@@ -96,6 +90,7 @@ body {
 }
 
 .ProjectPicture {
+  margin: 25px;
   flex: 0 0 auto; /* Prevents the picture from stretching */
 }
 
@@ -114,6 +109,7 @@ body {
   font-size: 36px;
   margin: 0;
   text-align: center;
+  margin-top: 25px;
 }
 
 .ProjectDescription {
@@ -131,7 +127,7 @@ body {
 }
 
 .ProjectLink {
-  margin-top: 10px;
+  margin: 0px 0px 10px;
   color: #61dafb;
   text-decoration: none;
 }
@@ -148,16 +144,73 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   max-height: none;
 }
-.ProjectTileLeftColumn.expanded {
-  max-width: 400px;
-}
 
-.ProjectTile.expanded .ProjectCaption,
-.ProjectTile.expanded .ProjectLink {
-  display: block;
-}
-
-.ProjectCaption,
-.ProjectLink {
+.SingleColumn {
   display: none;
+}
+
+@media (max-width: 1000px) {
+  .ProjectTileLeftColumn {
+    display: none;
+  }
+  .SingleColumn {
+    display: block;
+  }
+  .ProjectTile {
+    max-height: none;
+  }
+  .ProjectTileRightColumn {
+    padding: 0px 20px;
+  }
+  .ProjectDescription {
+    margin: 0px 0px 10px;
+  }
+  .ProjectPicture {
+    margin: 10px 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .Projects {
+    grid-template-columns: 1fr;
+  }
+  .SingleColumn {
+    display: none;
+  }
+  .ProjectTileLeftColumn {
+    display: block;
+  }
+  .ProjectTile {
+    max-height: 400px;
+  }
+  .ProjectTileRightColumn {
+    padding-right: 25px;
+  }
+  .ProjectDescription {
+    margin-right: 25px;
+  }
+  .ProjectPicture {
+    margin: 25px;
+  }
+}
+
+@media (max-width: 550px) {
+  .ProjectTileLeftColumn {
+    display: none;
+  }
+  .SingleColumn {
+    display: block;
+  }
+  .ProjectTile {
+    max-height: none;
+  }
+  .ProjectTileRightColumn {
+    padding: 0px 20px;
+  }
+  .ProjectDescription {
+    margin: 0px 0px 10px;
+  }
+  .ProjectPicture {
+    margin: 10px 0px;
+  }
 }

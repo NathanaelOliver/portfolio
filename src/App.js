@@ -18,47 +18,50 @@ function App() {
       </header>
       <section className="Projects">
         {projects.map((project, index) => (
-          <div
+          <ProjectTile
             key={index}
-            className={`ProjectTile ${
-              expandedIndex === index ? "expanded" : ""
-            }`}
-            onClick={() => handleTileClick(index)}
-          >
-            <div
-              className={`ProjectTileLeftColumn ${
-                expandedIndex === index ? "expanded" : ""
-              }`}
-            >
-              <div className="ProjectPicture">
-                <img src={project.picture} alt={project.caption} />
-              </div>
-              {expandedIndex === index && (
-                <p className="ProjectCaption">{project.caption}</p>
-              )}
-            </div>
-            <div
-              className={`ProjectTileRightColumn ${
-                expandedIndex === index ? "expanded" : ""
-              }`}
-            >
-              <h2 className="ProjectTitle">{project.title}</h2>
-              <p
-                className={`ProjectDescription ${
-                  expandedIndex === index ? "expanded" : ""
-                }`}
-              >
-                {project.description}
-              </p>
-              {expandedIndex === index && (
-                <a href={project.link} className="ProjectLink">
-                  Learn More
-                </a>
-              )}
-            </div>
-          </div>
+            index={index}
+            project={project}
+            expandedIndex={expandedIndex}
+            handleTileClick={handleTileClick}
+          />
         ))}
       </section>
+    </div>
+  );
+}
+
+function ProjectTile({ index, project, expandedIndex, handleTileClick }) {
+  const isExpanded = expandedIndex === index;
+
+  return (
+    <div
+      className={`ProjectTile ${isExpanded ? "expanded" : ""}`}
+      onClick={() => handleTileClick(index)}
+    >
+      <div className={`ProjectTileLeftColumn`}>
+        <div className="ProjectPicture">
+          <img src={project.picture} alt={project.caption} />
+        </div>
+        {isExpanded && <p className="ProjectCaption">{project.caption}</p>}
+      </div>
+      <div className={`ProjectTileRightColumn`}>
+        <h2 className="ProjectTitle">{project.title}</h2>
+        <div className="SingleColumn">
+          <div className="ProjectPicture">
+            <img src={project.picture} alt={project.caption} />
+          </div>
+          {isExpanded && <p className="ProjectCaption">{project.caption}</p>}
+        </div>
+        <p className={`ProjectDescription ${isExpanded ? "expanded" : ""}`}>
+          {project.description}
+        </p>
+        {isExpanded && (
+          <a href={project.link} className="ProjectLink">
+            Learn More
+          </a>
+        )}
+      </div>
     </div>
   );
 }
