@@ -5,7 +5,7 @@ const description =
 const projects = [
   {
     title: "Vex Robotics AI Object Detection",
-    picture: "./portfolio/images/AI_Triball_Detection.png",
+    picture: "/portfolio/images/AI_Triball_Detection.png",
     caption: "Image used in training recognition model",
     link: "/portfolio/pdfs/AI_Vision_Report.pdf",
     description:
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: "Multi Sense Rescue Machine Learning System",
-    picture: "./portfolio/images/Sound_Navigation.gif",
+    picture: "/portfolio/images/Sound_Navigation.gif",
     caption: "Robot Navigating to Sound Source after training",
     link: "/portfolio/pdfs/AI_Audio_Navigation_Report.pdf",
     description:
