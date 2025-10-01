@@ -75,8 +75,8 @@ function App() {
 }
 
 function ProjectTile({ index, project, expandedIndex, handleTileClick }) {
-  const isExpanded = expandedIndex === index;
-
+  // const isExpanded = expandedIndex === index;
+  const isExpanded = true;
   return (
     <div
       className={`ProjectTile ${isExpanded ? "expanded" : ""}`}
@@ -101,7 +101,7 @@ function ProjectTile({ index, project, expandedIndex, handleTileClick }) {
         </p>
         {isExpanded && (
           <a href={project.link} className="ProjectLink">
-            Learn More
+            Link to Research Paper
           </a>
         )}
       </div>

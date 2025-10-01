@@ -17,7 +17,7 @@ const projects = [
     caption: "Robot Navigating to Sound Source after training",
     link: "/portfolio/pdfs/AI_Audio_Navigation_Report.pdf",
     description:
-      "I worked in a team to replicate the work of navigating to multiple sound sources using a binaural microphone and cameras. We used a robot in the sound spaces environment to simulate an environment playing multiple noises and the robot could create a path and navigate to the sound source. This is usefule",
+      "I worked in a team to replicate the work of navigating to multiple sound sources using a binaural microphone and cameras. We used a robot in the sound spaces environment to simulate an environment playing multiple noises and the robot could create a path and navigate to the sound source.",
   },
 ];
 
